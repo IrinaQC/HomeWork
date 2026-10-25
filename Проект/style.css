@@ -265,6 +265,28 @@ button {
     cursor: pointer;
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#feedback button[type="submit"] {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+#payment button {
+    animation: pulse 2s ease-in-out infinite;
+}
+
 #feedback {
     margin-top: 20px;
 }
@@ -370,4 +392,56 @@ button {
     .card {
         padding: 12px;
     }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container > header {
+    animation: fade-in 0.7s ease both;
+    animation-delay: 0s;
+}
+
+.container > nav {
+    animation: fade-in 0.7s ease both;
+    animation-delay: 0.2s;
+}
+
+.container > main > section#about {
+    animation: fade-in 0.7s ease both;
+    animation-delay: 0.4s;
+}
+
+.container > main > .card {
+    animation: fade-in 0.7s ease both;
+    animation-delay: 0.6s;
+}
+
+.container > main > section#schedule {
+    animation: fade-in 0.7s ease both;
+    animation-delay: 0.8s;
+}
+
+.container > main > section#feedback {
+    animation: fade-in 0.7s ease both;
+    animation-delay: 1s;
+}
+
+.container > main > section#payment {
+    animation: fade-in 0.7s ease both;
+    animation-delay: 1.2s;
+}
+
+.container > footer {
+    animation: fade-in 0.7s ease both;
+    animation-delay: 1.4s;
 }
